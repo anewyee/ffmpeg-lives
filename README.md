@@ -5,6 +5,7 @@
 ## Link new Version
 - [ffmpeg 4.0](http://www.ffmpeg.org/download.html)
 - [yasm](http://yasm.tortall.net/) [yasm github](https://github.com/yasm/yasm)
+- [x264](http://download.videolan.org/x264/snapshots/)
 
 ## yasm install
 > Yasm is a complete rewrite of the NASM assembler.
@@ -16,13 +17,46 @@ cd yasm-1.3.0/
 make
 make install
 ```
+
+## x264
+
+```
+ tar -xjvf last_x264.tar.bz2 
+ cd x264-snapshot-20190628-2245/
+./configure --prefix=/usr/local/x264 --enable-shared --enable-static --enable-yasm
+
+make
+
+make install
+```
+
+其他安装方法：
+> Unknown encoder 'libx264' 即，缺少libx264库，需要安装该库：
+
+1. git clone git://git.videolan.org/x264.git
+2. cd x264
+3. ./configure --includedir=/usr/local/include --libdir=/usr/local/lib --enable-shared 
+
+出现错误时添加：--disable-asm
+
+4. make
+5. sudo make install
+
+
 ## ffmpeg install
+
+- 安装依赖包
+
+```
+apt-get install libfaac-dev libmp3lame-dev libtheora-dev libvorbis-dev libxvidcore-dev libxext-dev libxfixes-dev
+```
+- 库安装
 
 ```
 tar -xjvf ffmpeg-4.0.2.tar.bz2
 cd ffmpeg-4.0.2/
-./configure --enable-shared --enable-gpl --enable-libx264 --enable-libmp3lame --prefix=/monchickey/ffmpeg
-make
+./configure --enable-shared --enable-gpl --enable-libx264 --enable-libmp3lame  --enable-libfreetype --prefix=/monchickey/ffmpeg && \
+make && \
 make install
 ```
 
