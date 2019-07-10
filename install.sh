@@ -6,7 +6,7 @@ cd x264 && \
 make && \
 make install && \
 
-cd ../../ffmpeg && \
+cd ../ffmpeg && \
 tar -xvzf yasm-1.3.0.tar.gz && \ 
 cd yasm-1.3.0/ && \
 ./configure && \

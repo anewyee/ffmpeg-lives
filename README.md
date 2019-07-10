@@ -3,6 +3,8 @@
 编译新版本的ffmpeg，用于24H稳定推流服务。
 
 ## Link new Version
+- [安装总览](http://www.linuxfromscratch.org/blfs/view/svn/multimedia/ffmpeg.html)
+
 - [ffmpeg 4.0](http://www.ffmpeg.org/download.html)
 - [yasm](http://yasm.tortall.net/) [yasm github](https://github.com/yasm/yasm)
 - [x264](http://download.videolan.org/x264/snapshots/)
