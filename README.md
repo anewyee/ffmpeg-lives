@@ -50,7 +50,8 @@ make install
 - 安装依赖包
 
 ```
-apt-get install libfaac-dev libmp3lame-dev libtheora-dev libvorbis-dev libxvidcore-dev libxext-dev libxfixes-dev
+apt-get install libfaac-dev libmp3lame-dev libtheora-dev libvorbis-dev libxvidcore-dev libxext-dev libxfixes-dev  pkg-config
+
 ```
 - 库安装
 
@@ -61,6 +62,7 @@ cd ffmpeg-4.0.2/
 make && \
 make install
 ```
+./configure --enable-shared --enable-gpl --enable-libx264 --enable-libmp3lame    --prefix=/monchickey/ffmpeg
 
 ## config
 
