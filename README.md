@@ -1,6 +1,6 @@
 # ffmpeg
 
-编译新版本的ffmpeg，用于24H稳定推流服务。
+基于ffmpeg，用于24H稳定推流服务。
 
 ## Link new Version
 - [安装总览](http://www.linuxfromscratch.org/blfs/view/svn/multimedia/ffmpeg.html)
